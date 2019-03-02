@@ -3,7 +3,7 @@
 
 <head>
     <link rel="shortcut icon" href="/images/download.png" />
-    <title>Create</title>
+    <title>Log In</title>
     <style>
 
     </style>
@@ -27,8 +27,8 @@
 
 </head>
 
-<body ng-app="Cinema" ng-controller="createMovieController">
-    <nav class="navbar navbar-default" style="background: red;">
+<body ng-app="Cinema" ng-controller="logInController">
+    <nav class="navbar navbar-default" style="background: red; top: 0px; z-index: 1 ;">
         <div class="container-fluid" style="height: 60px; ">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -52,51 +52,29 @@
                     <span class="glyphicon glyphicon-plus" aria-hidden="true" style="margin-right:5px;"></span>Create movie</li>
             </ul>
         </div><!-- /.navbar-collapse -->
-
     </nav>
-    <div style="margin-top: 150px;">
-        <div style="float: left;">
-            <img src="/images/cinema_vector.jpg" style="width: 400px; height: 400px;
-        margin-left: 200px;">
+    <div class="formLogIn">
+        <form style="width: auto; padding: 5px 30px;
+            height: 600px;
+            color: black; 
+            font-size: 30px; 
+            max-width: 600px;
+            margin-left: 20px;
+            margin-top: 30px;">
+            Email:<br>
+            <input type="text" name="email" class="input" ng-model="email">
+            <br>
+            Password:<br>
+            <input type="password" name="password" class="input" ng-model="password">
             <br><br>
-            <div style="color: black; width: 30%; margin-left: 200px;">
-                <input type="addpicture" class="button1" value="Add Picture">
-            </div>
-        </div>
-        <div style="width: 55%; float: left;" >
-
-            <form style="padding: 5px 30px; color: black;">
-                Name of movie:<br>
-                <input type="text" name="nameofmovie" class="input" ng-model="movieName">
-                <br>
-                Movie genre:<br>
-                <select ng-options="item as item.name for item in items" class="input" ng-model="genre">
-
-                </select>
-                <br>
-                Release time:<br>
-                <input type="text" id="datepicker" name="releasetime" class="input">
-                <br>
-                Description:<br>
-                <textarea name="description" class="input" rows="5" style="
-                height: 150px; padding-top: 10px;" ng-model="description"></textarea>
-                <br><br>
-                <input type="submit" class="button" ng-click="createMovie()" value="Create" style="margin-left: 175px;">
-                
-            </form>
-
-        </div>
+            <input type="submit" class="logIn" ng-click="userLogIn()" value="Log In">
+        </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script> -->
-    <script src="/javascripts/movie/create.js"></script>
-    <script>
-    $( function() {
-    $("#datepicker" ).datepicker({ dateFormat: 'dd/mm/yy'});
-    $('#datepicker').datepicker('setDate', new Date());
-  } );
-    </script>
+    <script src="/javascripts/user/login.js"></script>
+    <script src="/javascripts/common.js"></script>
 </body>
 
 </html>

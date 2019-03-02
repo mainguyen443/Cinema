@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="/images/download.png" />
+    <title>Sign Up</title>
+    <style>
+
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body ng-app="Cinema" ng-controller="signUpController">
+    <nav class="navbar navbar-default" style="background: red; top: 0px; z-index: 1 ;">
+        <div class="container-fluid" style="height: 60px; ">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <img src="/images/images.png" style="
+                    width: 55px; height: 60px; margin-left: 5px; margin-top: 17px;">
+            </div>
+
+            <div class="nav navbar-nav">
+                <li class="active" style="
+                        font-size: 45px; 
+                        margin-left: 20px; 
+                        margin-top: 20px;"><a href="/" style="background: red; color: white;  ">Cinema</a>
+                </li>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active" style="
+                    font-size: 25px; 
+                    color: white;
+                    margin-right: 5px;
+                    margin-top: 15px;">
+            <a href="/movie/create" style="background: red; color: white;"><span
+            class="glyphicon glyphicon-plus" aria-hidden="true" style="margin-right:5px;"></span>Create Movie</a>
+                </li>           
+            </ul>
+        </div><!-- /.navbar-collapse -->
+
+    </nav>
+    <div class="formSignUp">
+        <form style="width: auto; padding: 5px 30px;
+            height: 600px;
+            color: black; 
+            font-size: 30px; 
+            max-width: 600px;
+            margin-left: 20px;
+            margin-top: 30px;">
+            User Name:<br>
+            <input type="text" name="userName" class="input" ng-model="userName">
+            <br>
+            Email:<br>
+            <input type="text" name="email" class="input" ng-model="email">
+            <br>
+            Password:<br>
+            <input type="password" name="password" class="input" ng-model="password">
+            <br>
+            Repeat Password:<br>
+            <input type="password" name="repeatPassword" class="input" ng-model="repeatPassword">
+            <br><br>
+            <input type="submit" class="signUp" ng-click="userSignUp()" value="Sign Up">
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script> -->
+    <script src="/javascripts/user/signup.js"></script>
+    <script src="/javascripts/common.js"></script>
+</body>
+
+</html>

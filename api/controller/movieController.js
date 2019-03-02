@@ -16,7 +16,9 @@ const getListMovie = async function(){
     return { listMovie: listMovie}
 }
 
+
 module.exports = {
     createMovie: createMovie,
-    getListMovie: getListMovie
+    getListMovie: getListMovie,
+
 }

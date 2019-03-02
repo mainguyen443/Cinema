@@ -28,7 +28,8 @@ app.controller('createMovieController', function ($scope, $http) {
         }
 
         $http.post('/api/v1/movie/create', data).then(function (res) {
-            console.log(res)
+          window.alert('Create movie successfully')
+          window.location.href = '/'
         })
     }
 });

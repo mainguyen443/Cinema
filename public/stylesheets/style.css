@@ -59,11 +59,84 @@ a {
   cursor: pointer;
   padding-left: 15px;
 }
-
 .input:focus{
   outline: none;
 }
-
 .input:hover{
   cursor: text;
+}
+
+.formSignUp{
+  border: 2px solid red;
+  width: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+  border-radius: 30px;
+  height: 650px;
+}
+.signUp{
+  padding: 10px ;
+  width: 140px;
+  float: right;
+  margin-right: 60px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background: transparent;
+  border: 2px solid red;
+  border-radius: 10px; 
+}
+.signUp:hover{
+  color: white;
+  background-color: red;
+}
+
+.logIn{
+  padding: 10px 20px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background: transparent;
+  border: 2px solid red;
+  border-radius: 10px; 
+}
+.logIn:hover{
+  color: white;
+  background-color: red;
+}
+
+.formLogIn{
+  border: 2px solid red;
+  width: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+  border-radius: 30px;
+  height: 400px;
+}
+
+.logIn{
+  padding: 10px ;
+  width: 140px;
+  float: right;
+  margin-right: 60px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background: transparent;
+  border: 2px solid red;
+  border-radius: 10px; 
+}
+.logIn:hover{
+  color: white;
+  background-color: red;
 }

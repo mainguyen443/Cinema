@@ -4,10 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('./api/model/Movie')
+require('./api/model/User')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var movieRouter = require('./api/route/v1/movie')
+var userRouter = require("./api/route/v1/user")
 var app = express();
 
 // view engine setup
@@ -21,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/v1/user', userRouter);
 app.use('/api/v1/movie', movieRouter)
 
 
