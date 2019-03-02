@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="/images/download.png" />
+    <title>Create</title>
+    <style>
+
+    </style>
+    <title><%= title %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+
+<body ng-app="Cinema" ng-controller="createMovieController">
+    <nav class="navbar navbar-default" style="background: red;">
+        <div class="container-fluid" style="height: 60px; ">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <img src="/images/images.png" style="
+                width: 55px; height: 60px; margin-left: 5px; margin-top: 17px;">
+            </div>
+
+            <div class="nav navbar-nav">
+                <li class="active" style="
+                    font-size: 45px; 
+                    margin-left: 20px; 
+                    margin-top: 20px;"><a href="/home" style="background: red; color: white;  ">Cinema</a>
+                </li>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="
+                    font-size: 25px; 
+                    color: white;
+                    margin-right: 5px;
+                    margin-top: 20px;">Create movie</li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+
+    </nav>
+    <div style="margin-top: 150px;">
+        <div style="float: left;">
+            <img src="/images/cinema_vector.jpg" style="width: 400px; height: 400px;
+        margin-left: 200px;">
+            <br><br>
+            <div style="color: black; width: 30%; margin-left: 200px;">
+                <input type="addpicture" class="button1" value="Add Picture">
+            </div>
+        </div>
+        <div style="width: 55%; float: left;">
+
+            <form style="padding: 5px 30px; color: black;">
+                Name of movie:<br>
+                <input type="text" name="nameofmovie" class="input" ng-model="movieName">
+                <br>
+                Movie genre:<br>
+                <select ng-options="item as item.name for item in items" class="input" ng-model="genre">
+
+                </select>
+                <br>
+                Release time:<br>
+                <input type="text" id="datepicker" name="releasetime" class="input">
+                <br>
+                Description:<br>
+                <textarea name="description" class="input" rows="5" style="
+                height: 150px; padding-top: 10px;" ng-model="description"></textarea>
+                <br><br>
+                <input type="submit" class="button" ng-click="createMovie()" value="Submit" style="margin-left: 175px;">
+                
+            </form>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script> -->
+    <script src="/javascripts/movie/create.js"></script>
+    <script>
+     $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="/images/download.png" />
+    <title>Cinema</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body ng-app="Cinema" ng-controller="listMovieController">
+    <nav class="navbar navbar-default" style="background: red; margin-left: -8px; margin-top: -8px; top:0;">
+        <div class="container-fluid" style="height: 60px; ">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <img src="/images/images.png" style="
+                    width: 55px; height: 60px; margin-left: 5px; margin-top: 17px;">
+            </div>
+            <div class="nav navbar-nav">
+                <li class="active" style="
+                            font-size: 45px; 
+                            color: white; 
+                            margin-left: 20px; 
+                            margin-top: 20px;">Cinema</li>
+            </div>
+            <div class="nav navbar-nav navbar-right">
+                <li class="active" style="
+                            font-size: 25px; 
+                            color: white;
+                            margin-right: 5px;
+                            margin-top: 20px;">
+                    <a href="/movie/create" style="background: red; color: white;">Create Movie</a>
+            </div>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+    <div style="margin-top: 150px;" ng-repeat="movie in listMovie">
+        <div style="float: left;">
+            <img src="/images/haiphuongposter.jpg" style="width: 300px; height: 300px;
+                    margin-left: 100px;">
+            <br><br>
+            <div style="width: 100%; float: left;">
+                <form style="padding: 5px; color: black; margin-left: 100px;">
+                    Name: {{movie.name}}<br>
+                    Genre: {{movie.genre}}<br>
+                    Premiere date: {{movie.release}}<br>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/javascripts/home.js"></script>
+
+</html>

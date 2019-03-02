@@ -3,10 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('./api/model/Movie')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var movieRouter = require('./api/route/v1/movie')
 var app = express();
 
 // view engine setup
@@ -21,6 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api/v1/movie', movieRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,3 +42,11 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://admin:admin123@ds151124.mlab.com:51124/cinemadb';
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
